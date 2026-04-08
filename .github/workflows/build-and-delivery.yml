@@ -1,7 +1,10 @@
 name: Build and Delivery
 
 on:
-  push
+  workflow_run:
+    workflows: ["Test Python app"]
+    types:
+      - completed
 
 jobs:
   cd:
