@@ -1,12 +1,7 @@
 name: Build and Delivery
 
 on:
-  workflow_run:
-    workflows: ["Test Python app"]
-    types:
-      - completed
-    # branches:
-    #   - 'main'
+  push
 
 jobs:
   cd:
